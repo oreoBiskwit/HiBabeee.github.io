@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will you be my Valentine?</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+<style>
+body {
+  background-color: #ffd1dc;
+  color:rgb(247, 38, 132); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Indie Flower', cursive;
+}
+
+.container {
+  text-align: center;
+}
+
+.content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+.options {
+  margin-top: 20px;
+}
+
+label {
+  margin: 0 10px;
+}
+
+#noMessage {
+  color: #ff0000; 
+  font-size: 25px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.yes {
+  background-color: green;
+  color: white;
+}
+
+.no {
+  background-color: red;
+  color: white;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="content">
+    <img src="cat-flowers.jpg" alt="Cat with flower" style="width: 200px; margin-bottom: 20px;">
+    <h1>Hi babyyyyy!!</br>Will you be my valentine?</br>please :D</h1>
+    <div class="options">
+      <button class="button yes" onclick="handleButtonClick(true)">Yes</button>
+      <button id="noButton" class="button no" onclick="handleButtonClick(false)">No</button>
+    </div>
+    <p id="noMessage" style="display: none;">No! Wala ka choice, babe. muahahahsha :></p>
+  </div>
+</div>
+<script>
+function handleButtonClick(yesClicked) {
+  const noButton = document.getElementById('noButton');
+  const noMessage = document.getElementById('noMessage');
+  
+  if (yesClicked) {
+    window.location.href = "valentine.html"; 
+  } else {
+    noButton.style.display = 'none';
+    noMessage.style.display = 'block';
+  }
+}
+</script>
+</body>
+</html>
